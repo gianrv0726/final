@@ -40,6 +40,9 @@ urlpatterns = [
     #invitaciones
     url(r'^invitar/', views.invitar, name='invitar'),
     url(r'^perfil/', views.perfil, name='perfil'),
+    url(r'^logout_user/$', views.logout_user, name='logout_user'),
+    url(r'^loguot', views.index, name='index'),
+    
 
     url(r'^perfil1/', views.perfil1, name='perfil1'),
     url(r'^invitarusuario/', views.invitarusuario, name='invitarusuario'),

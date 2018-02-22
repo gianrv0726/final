@@ -74,3 +74,8 @@ class TeamForm(forms.Form):
 class invit(forms.Form):
 	grupo = forms.CharField(widget=forms.TextInput(), required=True);
 	usuario = forms.CharField(widget=forms.TextInput(),required=True)
+
+class UserForm(forms.ModelForm):
+    class Meta:
+            model = users
+            fields = ['username', 'password']

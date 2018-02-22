@@ -3,9 +3,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from .models import User, Question, Answer, Lobby, Partido, Polla, PollaApuesta, PollaPartido, PollaPuntaje, Player, Invitacion
 from .forms import RegisterForm, LoginForm, LobbyForm, CompleteRegForm, PollaForm, TeamForm
-
+from django.contrib.auth import logout
+from .forms import UserForm
 from django.contrib import messages
 import random
+from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 
 
@@ -779,3 +781,12 @@ def perfil1(request):
         #'misgrupos': misgrupos(usern)
         }
         return render(request,'mundialitisapps/main.html',context)
+
+
+def logout_user(request):
+    logout(request)
+    form = UserForm(request.POST or None)
+    context = {
+        "form": form,
+    }
+    return HttpResponseRedirect('/loguot/')
