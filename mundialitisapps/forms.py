@@ -68,3 +68,9 @@ class TeamForm(forms.Form):
         self.fields['jugadores'].widget.attrs = {
             'class': 'form-control'
         }
+
+
+    #invitacion
+class invit(forms.Form):
+	grupo = forms.CharField(widget=forms.TextInput(), required=True);
+	usuario = forms.CharField(widget=forms.TextInput(),required=True)

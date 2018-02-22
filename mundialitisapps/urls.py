@@ -37,7 +37,18 @@ urlpatterns = [
     url(r'^polla/$', views.polla, name='pollahome'),
     url(r'^polla/(?P<id_p>\d+)/$', views.polla_apuesta, name='polla'),
     url(r'^polla/resultados', views.polla_resultado, name='polla_resultado'),
+    #invitaciones
+    url(r'^invitar/', views.invitar, name='invitar'),
+    url(r'^perfil/', views.perfil, name='perfil'),
 
+    url(r'^perfil1/', views.perfil1, name='perfil1'),
+    url(r'^invitarusuario/', views.invitarusuario, name='invitarusuario'),
+    url(r'^agregargrupo/', views.agregargrupo, name='agregargrupo'),
+    url(r'^responderinvitacion/', views.responderinvitacion, name='responderinvitacion'),
+    url(r'^useradmingroup/', views.useradmingroup, name='useradmingroup'),
+    url(r'^misgrupos/', views.misgrupos, name='misgrupos'),
+    url(r'^grupousuarios/', views.grupousuarios, name='grupousuarios'),
+    url(r'^usuariosgrupo/', views.usuariosgrupo, name='usuariosgrupo')
 
 
 
