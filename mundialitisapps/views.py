@@ -706,7 +706,7 @@ def responderinvitacion(request):
 #listo
 def useradmingroup(ruser):
     rpta=[]
-    lista= lobby.objects.filter(players=ruser)
+    lista= Lobby.objects.filter(players=ruser)
     for i in lista:
         rpta.append(i.name)
     return rpta
