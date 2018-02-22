@@ -1,5 +1,5 @@
 from django import forms
-from .models import Team, Player
+from .models import Team, Player, User
 
 class RegisterForm(forms.Form):
     regusername = forms.CharField()
@@ -77,5 +77,5 @@ class invit(forms.Form):
 
 class UserForm(forms.ModelForm):
     class Meta:
-            model = users
+            model = User
             fields = ['username', 'password']
