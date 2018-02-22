@@ -625,7 +625,7 @@ def invitarusuario(request):
     invi=info.get('invitado','')
     grp=info.get('grupo','')
     username = request.session.get('username')
-    invitadoexiste= users.objects.filter(username=invi).count()
+    invitadoexiste= User.objects.filter(username=invi).count()
     obj= 0
     obj = Invitacion.objects.filter(grupo=grp,invitado=invi).count()
     print ('asdaskdnojas')
@@ -676,7 +676,7 @@ def listausuarios(rgrupo):
 #si el nombre es administrador de grupo retorna true
 #listo
 def admingrupos(nombre,rgrupo):
-    lista= lobbies.objects.filter(players=nombre,name=rgrupo).count()
+    lista= Lobby.objects.filter(players=nombre,name=rgrupo).count()
     if lista==1:
         return (True)
     else:
